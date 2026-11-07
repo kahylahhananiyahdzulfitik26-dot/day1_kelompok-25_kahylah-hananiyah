@@ -2,6 +2,8 @@
 
 Aplikasi web sederhana untuk membantu mahasiswa tahun pertama mencatat tugas dan tenggat waktu kuliah. Dibuat dengan HTML, CSS, dan JavaScript murni, tanpa library tambahan, sehingga mudah dipahami pemula.
 
+**Dibuat oleh:** Kahylah Hananiyah Dzulfi
+
 ## Fitur
 
 - Menampilkan daftar tugas contoh lengkap dengan judul, tanggal tenggat, dan status.
@@ -106,6 +108,10 @@ git push origin main
 - Mengurutkan tugas berdasarkan tenggat.
 - Mode gelap.
 - Pengingat untuk tugas yang tenggatnya dekat.
+
+## Penulis
+
+Kahylah Hananiyah Dzulfi
 
 ## Lisensi
 
