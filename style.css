@@ -1,0 +1,118 @@
+/* ===== Variabel warna: ubah di sini untuk ganti tema ===== */
+:root {
+  --utama: #4f46e5;
+  --utama-muda: #eef2ff;
+  --teks: #1f2937;
+  --teks-redup: #6b7280;
+  --latar: #f3f4f6;
+  --kartu: #ffffff;
+  --hijau: #16a34a;
+  --merah: #dc2626;
+  --garis: #e5e7eb;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--latar);
+  color: var(--teks);
+  line-height: 1.5;
+}
+
+.wadah {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+/* ===== Kepala ===== */
+.kepala { text-align: center; margin-bottom: 24px; }
+.kepala h1 { font-size: 1.8rem; color: var(--utama); }
+.kepala p { color: var(--teks-redup); margin-top: 4px; }
+
+/* ===== Ringkasan ===== */
+.ringkasan {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.ringkasan div {
+  background: var(--kartu);
+  border-radius: 12px;
+  padding: 14px 8px;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .06);
+}
+.ringkasan strong { display: block; font-size: 1.5rem; color: var(--utama); }
+.ringkasan span { font-size: .8rem; color: var(--teks-redup); }
+
+/* ===== Filter ===== */
+.filter { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+.filter-btn {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--garis);
+  background: var(--kartu);
+  color: var(--teks-redup);
+  border-radius: 10px;
+  font: inherit;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.filter-btn:hover { background: var(--utama-muda); }
+.filter-btn.aktif {
+  background: var(--utama);
+  border-color: var(--utama);
+  color: #fff;
+}
+
+/* ===== Daftar tugas ===== */
+.daftar { list-style: none; display: grid; gap: 12px; }
+
+.tugas {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--kartu);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .06);
+  border-left: 4px solid var(--utama);
+}
+.tugas.selesai { border-left-color: var(--hijau); opacity: .75; }
+
+.tugas input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  accent-color: var(--hijau);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.isi { flex: 1; min-width: 0; }
+.judul { font-weight: 600; word-wrap: break-word; }
+.tugas.selesai .judul { text-decoration: line-through; color: var(--teks-redup); }
+
+.info { font-size: .85rem; color: var(--teks-redup); margin-top: 2px; }
+.info.lewat { color: var(--merah); font-weight: 600; }
+
+.status {
+  font-size: .75rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--utama-muda);
+  color: var(--utama);
+  white-space: nowrap;
+}
+.tugas.selesai .status { background: #dcfce7; color: var(--hijau); }
+
+.kosong { text-align: center; color: var(--teks-redup); padding: 32px 0; }
+
+/* ===== Layar kecil (HP) ===== */
+@media (max-width: 480px) {
+  .kepala h1 { font-size: 1.5rem; }
+  .tugas { flex-wrap: wrap; }
+  .status { margin-left: 36px; }
+}

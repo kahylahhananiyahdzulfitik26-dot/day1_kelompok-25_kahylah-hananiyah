@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Task Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wadah">
+    <header class="kepala">
+      <h1>Student Task Planner</h1>
+      <p>Catat tugas dan deadline kuliahmu di satu tempat.</p>
+    </header>
+
+    <!-- Ringkasan jumlah tugas -->
+    <section class="ringkasan" aria-live="polite">
+      <div><strong id="jumlah-semua">0</strong><span>Semua</span></div>
+      <div><strong id="jumlah-pending">0</strong><span>Belum selesai</span></div>
+      <div><strong id="jumlah-selesai">0</strong><span>Selesai</span></div>
+    </section>
+
+    <!-- Tombol filter -->
+    <nav class="filter" aria-label="Filter tugas">
+      <button class="filter-btn aktif" data-filter="all">Semua</button>
+      <button class="filter-btn" data-filter="pending">Belum selesai</button>
+      <button class="filter-btn" data-filter="completed">Selesai</button>
+    </nav>
+
+    <!-- Daftar tugas diisi oleh script.js -->
+    <ul id="daftar-tugas" class="daftar"></ul>
+
+    <!-- Pesan kalau tidak ada tugas pada filter yang dipilih -->
+    <p id="pesan-kosong" class="kosong" hidden>Tidak ada tugas di kategori ini.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
